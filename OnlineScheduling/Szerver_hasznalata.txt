@@ -1,0 +1,15 @@
+Build: gulp build paranccsal megtehetõ.
+Az adatbázis jelenleg fel van töltve, ha saját adatbázist szeretnénk módosítsuk az elérési 
+útvonalat a kódban a következõ helyeken: server.ts, dbuploader.ts
+Futtassuk a dbupload.js-t node dbupload.js paranccsal
+Futtassuk a szervert: node server.js
+A szerver a következõ kéréseket tudja kiszolgálni:
+1. Picture modell egy példányának lekérése:
+	localhost:5000/rest/picture/random
+   Ez visszaad egy Picture objektumot JSON string formátumban pl.: {"id":1, "likes":0, "image":"picture1"}
+2. a kép lekérése az adatbázisból:
+	localhost:5000/image/:name (itt a :name helyére az elõbb megkapott objektumból a picture1 kerüljön)
+3. A like tárolása:
+	localhost:5000/rest/picture/random
+	body paraméterbe kell megadni a következõket: id, likes (pl a fenti alapján 1 és 0 helyett 1)
+A képek jpg képek fix 600*900 as méretû mind.

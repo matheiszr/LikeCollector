@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "rootDir": "LikeCollector",
+        "types": [
+            "node"
+        ]
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
